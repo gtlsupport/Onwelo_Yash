@@ -1,0 +1,16 @@
+<div class="voter-list">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Has Voted</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let voter of voterList">
+          <td>{{voter.voterName}}</td>
+          <td>{{voter.hasVote | hasvote}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

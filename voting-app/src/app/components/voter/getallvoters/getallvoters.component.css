@@ -1,0 +1,22 @@
+.voter-list {
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    background-color: white;
+  }
+
+  .voter-list table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .voter-list th, .voter-list td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .voter-list th {
+    background-color: #f2f2f2;
+  }

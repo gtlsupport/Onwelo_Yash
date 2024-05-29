@@ -1,0 +1,17 @@
+<div class="header">
+  <h1>Voting App - Add Voter</h1>
+</div>
+
+<div class="container">
+  <form (submit)="HandleInsertVoter()">
+    <div class="form-group">
+      <label for="voterName">Voter Name</label>
+      <input type="text" [(ngModel)]="voterModel.VoterName" id="voterName" name="voterName" required>
+      <div *ngIf="message !== ''" style="color: red;">{{message}}</div>
+    </div>
+    <div class="form-group">
+      <button type="submit">Add Voter</button>
+    </div>
+  </form>
+<app-getallvoters [voters]="voterList"></app-getallvoters>
+</div>

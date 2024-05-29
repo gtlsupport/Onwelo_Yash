@@ -1,0 +1,23 @@
+<div class="header">
+    <h1>Voting App - Cast Vote</h1>
+  </div>
+  <div class="dropdown-container">
+    <div class="dropdown">
+        <label for="dropdown1">I am:</label>
+        <select id="dropdown1" [(ngModel)]="selectedVoterValue">
+          <option *ngFor="let option of votingMachine.voterList" [value]="option.voterId">{{ option.voterName }}</option>
+        </select>
+      </div>
+  
+      <div class="dropdown">
+        <label for="dropdown2">I vote for:</label>
+        <select id="dropdown2" [(ngModel)]="selectedCandidateValue">
+          <option *ngFor="let option of votingMachine.CandidateList" [value]="option.candidateId">{{ option.candidateName }}</option>
+        </select>
+      </div>
+      
+  </div>
+  <div *ngIf="message !== ''" style="color: red;">{{message}}</div>
+  
+  <button (click)="HandleSubmit()">Submit</button>
+  
